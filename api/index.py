@@ -1,11 +1,14 @@
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return 'Hello, World!'
 
-@app.route('/about')
+@app.route("/")
+def home():
+    return jsonify({"message": "Hello from Flask!"})
+
+
+@app.route("/about")
 def about():
-    return 'About'
+    return "About"
+
