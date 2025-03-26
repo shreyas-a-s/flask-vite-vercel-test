@@ -4,7 +4,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("/api/hello")  // Automatically proxied to Flask API
+    fetch("/messages/hello")  // Automatically proxied to Flask API
       .then(response => response.json())
       .then(data => setMessage(data.message))
       .catch(error => console.error("Error:", error));
