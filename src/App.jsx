@@ -24,8 +24,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/messages/hello" element={<MessageFetcher />} />
-        <Route path="/messages/about" element={<MessageFetcher />} />
+        <Route path="/api/hello" element={<MessageFetcher />} />
+        <Route path="/api/about" element={<MessageFetcher />} />
       </Routes>
     </Router>
   );

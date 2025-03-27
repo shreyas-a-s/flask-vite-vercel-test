@@ -3,12 +3,12 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 
-@app.route("/messages/hello")
+@app.route("/api/hello")
 def home():
     return jsonify({"message": "Hello from Flask!"})
 
 
-@app.route("/messages/about")
+@app.route("/api/about")
 def about():
     return "About"
 
