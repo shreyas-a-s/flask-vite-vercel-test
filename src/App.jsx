@@ -6,7 +6,7 @@ function MessageFetcher() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch(location.pathname)  // Automatically matches the API route
+    fetch(`/api/${location.pathname}`)  // Automatically matches the API route
       .then(response => response.json())
       .then(data => setMessage(data.message || data)) // Handle both JSON and plain text
       .catch(error => setMessage("Error fetching data"));
